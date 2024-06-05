@@ -1,0 +1,14 @@
+account:
+  msg: AMK Account prod application
+  build-version: 500
+
+  mailDetails:
+    hostName: prod-account@amk.com
+    port: 9000
+    from: prod-account@amk.com
+    subject: Your Account Details from AMK PROD Environment
+
+  activeBranches: 
+    - Phnom Penh
+    - Kompong Cham
+    - Battombong

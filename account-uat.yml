@@ -1,0 +1,14 @@
+account:
+  msg: AMK Account UAT application
+  build-version: 400
+
+  mailDetails:
+    hostName: uat-account@amk.com
+    port: 9000
+    from: uat-account@amk.com
+    subject: Your Account Details from AMK UAT Environment
+
+  activeBranches: 
+    - Phnom Penh
+    - Kompong Cham
+    - Battombong
