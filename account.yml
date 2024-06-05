@@ -1,0 +1,14 @@
+account:
+  msg: AMK Account Default application
+  build-version: 300
+
+  mailDetails:
+    hostName: default-account@amk.com
+    port: 9000
+    from: default-account@amk.com
+    subject: Your Account Details from AMK Default Environment
+
+  activeBranches: 
+    - Phnom Penh
+    - Kompong Cham
+    - Battombong
