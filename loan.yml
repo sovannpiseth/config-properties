@@ -1,0 +1,30 @@
+Loan:
+  msg: AMK Loan Default application
+  build-version: 300
+
+  mailDetails:
+    hostName: default-Loan@amk.com
+    port: 9000
+    from: default-Loan@amk.com
+    subject: Your Loan Details from AMK Default Environment
+
+  activeBranches: 
+    - Phnom Penh
+    - Kompong Cham
+    - Battombong
+
+spring:
+  datasource:
+    url: ${DATASOURCE_URL:jdbc:mysql://localhost:3306/digital_loan}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:digital_loan}
+
+  # cloud:
+  #   stream:
+  #     bindings:
+  #       showCustomer-out-0:
+  #         destination: customer-communication
+  #     kafka:
+  #       binder:
+  #         brokers:
+  #         - ${SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS:localhost:9092}

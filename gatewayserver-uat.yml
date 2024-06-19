@@ -1,0 +1,75 @@
+server:
+  port: 8073
+
+eureka:
+  instance:
+    hostname: 172.11.4.138
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://172.11.4.138:9001/eureka/
+
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: false
+  sql:
+    init:
+      platform: postgres
+  datasource:
+    url: jdbc:postgresql://192.168.100.137:5432/billerportal
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      username: biller
+      password: P#ssw0rd
+# Configure ldap server for query user
+# Configure ldap server type: embed, server
+  ldap:
+    embedded:
+      ldif: classpath:amk-ldap-user.ldif
+      base-dn: dc=amkcambodia,dc=com
+      port: 8388
+      urls: localhost
+      credential:
+        username: uid=admin
+        password: secret
+      validation:
+        enabled: false
+    urls: 192.168.3.236
+    base: dc=amltess,dc=kh
+    username: mms.demo@amltess.kh
+    password: Demo2023
+    port: 389
+    protocol: ldap
+
+
+# APIM JWT config
+apim:
+  url: https://uat-api-gwm.amkcambodia.com:8065
+  client:
+    id: b28e3e7a-e67f-403d-886d-166fc32aa208
+  private:
+    key:
+      path: /srv/biz_priv_key.pem
+  audience: http://apiserver/api/oauth/token
+  token:
+    validity: 900
+
+# Authorization Server KeyStore Configuration
+auth-server:
+  keystore:
+    path: dev/auth_server_keystore.p12
+    passphrase: Passw0rd
+    key-passphrase: Passw0rd
+    key-alias: key
+
+# Configure ldap server for query user
+# Configure ldap server type: embed, server
+ldap:
+  type: embed
+
+# ldap ssl configure
+  certificate:
+    path: 
+    passphrase: 

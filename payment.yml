@@ -1,0 +1,30 @@
+Payment:
+  msg: AMK Payment Default application
+  build-version: 300
+
+  mailDetails:
+    hostName: default-Payment@amk.com
+    port: 9000
+    from: default-Payment@amk.com
+    subject: Your Payment Details from AMK Default Environment
+
+  activeBranches: 
+    - Phnom Penh
+    - Kompong Cham
+    - Battombong
+
+spring:
+  datasource:
+    url: ${DATASOURCE_URL:jdbc:mysql://localhost:3306/digital_payment}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:digital_payment}
+
+  # cloud:
+  #   stream:
+  #     bindings:
+  #       showCustomer-out-0:
+  #         destination: customer-communication
+  #     kafka:
+  #       binder:
+  #         brokers:
+  #         - ${SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS:localhost:9092}

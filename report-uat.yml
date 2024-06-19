@@ -1,0 +1,30 @@
+Report:
+  msg: AMK Report UAT application
+  build-version: 400
+
+  mailDetails:
+    hostName: uat-Report@amk.com
+    port: 9000
+    from: uat-Report@amk.com
+    subject: Your Report Details from AMK UAT Environment
+
+  activeBranches: 
+    - Phnom Penh
+    - Kompong Cham
+    - Battombong
+
+spring:
+  datasource:
+    url: ${DATASOURCE_URL:jdbc:mysql://digital-uat.cevag9x0str2.ap-southeast-1.rds.amazonaws.com:3306/digital_report}
+    username: ${DB_USERNAME:digapp}
+    password: ${DB_PASSWORD:digapp}
+
+  # cloud:
+  #   stream:
+  #     bindings:
+  #       showCustomer-out-0:
+  #         destination: customer-communication
+  #     kafka:
+  #       binder:
+  #         brokers:
+  #         - ${SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS:localhost:9092}

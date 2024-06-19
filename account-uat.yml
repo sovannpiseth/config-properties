@@ -15,9 +15,9 @@ account:
 
 spring:
   datasource:
-    url: ${DATASOURCE_URL:jdbc:mysql://localhost:3306/digital_account}
-    username: ${DB_USERNAME:root}
-    password: ${DB_PASSWORD:digital_account}
+    url: ${DATASOURCE_URL:jdbc:mysql://digital-uat.cevag9x0str2.ap-southeast-1.rds.amazonaws.com:3306/digital_account}
+    username: ${DB_USERNAME:digapp}
+    password: ${DB_PASSWORD:digapp}
 
   cloud:
     stream:
@@ -27,4 +27,4 @@ spring:
       kafka:
         binder:
           brokers:
-          - ${SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS:localhost:9092}
+          - ${SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS:172.11.4.72:9092}

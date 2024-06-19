@@ -1,0 +1,28 @@
+Card:
+  msg: AMK Card prod application
+  build-version: 500
+
+  mailDetails:
+    hostName: prod-Card@amk.com
+    port: 9000
+    from: prod-Card@amk.com
+    subject: Your Card Details from AMK PROD Environment
+
+  activeBranches: 
+    - Phnom Penh
+    - Kompong Cham
+    - Battombong
+spring:
+  datasource:
+    url: ${DATASOURCE_URL:jdbc:mysql://localhost:3306/digital_card}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:digital_Card}
+  # cloud:
+  #   stream:
+  #     bindings:
+  #       showCustomer-out-0:
+  #         destination: customer-communication
+  #     kafka:
+  #       binder:
+  #         brokers:
+  #         - ${SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS:localhost:9092}

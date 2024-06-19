@@ -1,0 +1,31 @@
+Notification:
+  msg: AMK Notification UAT application
+  build-version: 400
+
+  mailDetails:
+    hostName: uat-Notification@amk.com
+    port: 9000
+    from: uat-Notification@amk.com
+    subject: Your Notification Details from AMK UAT Environment
+
+  activeBranches: 
+    - Phnom Penh
+    - Kompong Cham
+    - Battombong
+
+spring:
+  # datasource:
+  #   url: ${DATASOURCE_URL:jdbc:mysql://digital-uat.cevag9x0str2.ap-southeast-1.rds.amazonaws.com:3306/digital_notification}
+  #   username: ${DB_USERNAME:digapp}
+  #   password: ${DB_PASSWORD:digapp}
+
+  cloud:
+    stream:
+      bindings:
+        showCustomer-in-0:
+          destination: customer-communication
+          group: ${spring.application.name}
+      kafka:
+        binder:
+          brokers:
+          - ${SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS:172.11.4.72:9092}
