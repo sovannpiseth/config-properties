@@ -18,5 +18,5 @@ spring:
     name: account
   datasource:
     url: ${DATASOURCE_URL:jdbc:mysql://localhost:3306/digital_account}
-    username: ${DB_USERNAME:digital_account}
+    username: ${DB_USERNAME:ROOT}
     password: ${DB_PASSWORD:digital_account}
