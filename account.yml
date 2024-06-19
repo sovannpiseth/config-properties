@@ -18,3 +18,13 @@ spring:
     url: ${DATASOURCE_URL:jdbc:mysql://localhost:3306/digital_account}
     username: ${DB_USERNAME:root}
     password: ${DB_PASSWORD:digital_account}
+
+  cloud:
+    stream:
+      bindings:
+        showCustomer-out-0:
+          destination: customer-communication
+      kafka:
+        binder:
+          brokers:
+          - ${SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS:localhost:9092}
