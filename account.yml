@@ -14,8 +14,6 @@ account:
     - Battombong
 
 spring:
-  application:
-    name: account
   datasource:
     url: ${DATASOURCE_URL:jdbc:mysql://localhost:3306/digital_account}
     username: ${DB_USERNAME:root}
