@@ -15,7 +15,7 @@ account:
 
 spring:
   datasource:
-    url: ${DATASOURCE_URL:jdbc:mysql://localhost:3306/digitalplatform}
+    url: ${DATASOURCE_URL:jdbc:mysql://mysql:3306/digitalplatform}
     username: ${DB_USERNAME:root}
     password: ${DB_PASSWORD:digitalplatform}
 
@@ -27,4 +27,4 @@ spring:
       kafka:
         binder:
           brokers:
-          - ${SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS:localhost:9092}
+          - ${SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS:mysql:9092}
