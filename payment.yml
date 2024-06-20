@@ -15,9 +15,9 @@ Payment:
 
 spring:
   datasource:
-    url: ${DATASOURCE_URL:jdbc:mysql://localhost:3306/digital_payment}
+    url: ${DATASOURCE_URL:jdbc:mysql://localhost:3306/digitalplatform}
     username: ${DB_USERNAME:root}
-    password: ${DB_PASSWORD:digital_payment}
+    password: ${DB_PASSWORD:digitalplatform}
 
   # cloud:
   #   stream:

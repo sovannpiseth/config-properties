@@ -15,9 +15,9 @@ Report:
 
 spring:
   datasource:
-    url: ${DATASOURCE_URL:jdbc:mysql://localhost:3306/digital_report}
+    url: ${DATASOURCE_URL:jdbc:mysql://localhost:3306/digitalplatform}
     username: ${DB_USERNAME:root}
-    password: ${DB_PASSWORD:digital_report}
+    password: ${DB_PASSWORD:digitalplatform}
 
   # cloud:
   #   stream:
