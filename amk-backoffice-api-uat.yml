@@ -1,0 +1,63 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: false
+  sql:
+    init:
+      platform: postgres
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/billerportal}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      username: ${DATABASE_USERNAME:postgres}
+      password: ${DATABASE_PASSWORD:postgres}
+
+#Redis Config
+  redis:
+    host: localhost
+    port: 6379
+    password: root
+
+
+# RabbitMQ configuration
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      simple:
+        retry:
+          enabled: true
+          initial-interval: 3s
+          max-attempts: 1
+          max-interval: 10s
+          multiplier: 2
+# Configure queue, exchange and routing key
+rabbitmq:
+  queue:
+    json:
+      name: queue_payroll_posting
+    dlq:
+      json:
+        name: queue_payroll_posting.dlq
+  exchange:
+    json:
+      name: queue_payroll_posting_exchange
+    dlq:
+      json:
+        name: queue_payroll_posting_exchange.dlq
+  routing:
+    json: 
+      key: queue_payroll_posting_routing_key
+    dlq:
+      json:
+        key: queue_payroll_posting_routing_key.dlq
+
+
+# Configure CORS
+cors:
+  allowed-host: 
+  - http://localhost:4200
+  - http://localhost:4201
+
