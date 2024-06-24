@@ -28,5 +28,5 @@ spring:
       kafka:
         binder:
           brokers:
-          - ${SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS:localhost:9092}
-          - ${SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS:localhost:9093}
+            broker1: localhost:9093
+            broker2: localhost:9095
