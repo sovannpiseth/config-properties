@@ -1,5 +1,5 @@
 account:
-  msg: AMK Account Default application
+  msg: AMK Card Default application
   build-version: 300
 
   mailDetails:
