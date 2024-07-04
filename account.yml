@@ -1,5 +1,5 @@
 account:
-  msg: AMK Account Default application
+  msg: AMK Account Default application Resfresh Bus
   build-version: 300
 
   mailDetails:
@@ -15,9 +15,9 @@ account:
 
 spring:
   datasource:
-    url: ${DATASOURCE_URL:jdbc:mysql://mysql:3306/digital_account}
+    url: ${DATASOURCE_URL:jdbc:mysql://localhost:3306/digitalplatform}
     username: ${DB_USERNAME:root}
-    password: ${DB_PASSWORD:digital_account}
+    password: ${DB_PASSWORD:digitalplatform}
 
   cloud:
     stream:
@@ -27,5 +27,5 @@ spring:
       kafka:
         binder:
           brokers:
-          - ${SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS:localhost:9092}
-          - ${SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS:localhost:9093}
+            broker1: localhost:9093
+            broker2: localhost:9095
