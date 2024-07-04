@@ -58,6 +58,12 @@ apim:
     encryption:
       secret:
         key: ""
+    duration:
+      get:
+        new:
+          token:
+            before:
+              expired: 1000
 
 # Authorization Server KeyStore Configuration
 auth-server:
