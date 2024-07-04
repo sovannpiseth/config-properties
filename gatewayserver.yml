@@ -55,6 +55,9 @@ apim:
   audience: http://apiserver/api/oauth/token
   token:
     validity: 900
+    encryption:
+      secret:
+        key: ""
 
 # Authorization Server KeyStore Configuration
 auth-server:
